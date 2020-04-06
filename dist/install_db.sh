@@ -52,3 +52,7 @@ EOF
 
 /usr/bin/mysqld --datadir="${DATA_PATH}" --user=root --bootstrap --verbose=1 < $tfile
 rm -f $tfile
+
+sed -i "s/\['user'\] = 'root'/\['user'\] = 'mutillidae'/" /usr/share/nginx/html/mutillidae/phpmyadmin/config.inc.php
+sed -i "s/\['password'\] = ''/\['password'\] = '${MYSQL_PASSWORD}'/" /usr/share/nginx/html/mutillidae/phpmyadmin/config.inc.php
+sed -i "s/\['host'\] = '127.0.0.1'/\['host'\] = 'localhost'/" /usr/share/nginx/html/mutillidae/phpmyadmin/config.inc.php
