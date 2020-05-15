@@ -8,7 +8,8 @@ Forked from  https://github.com/edoz90/docker-mutillidae
     - PhpMyAdmin fixed
     - added logs for nginx\mariadb\php-fp
     - GMT +3 timezone 
-    - you may change default security level. See Dockerfile.
+    - you may change default security level. See Dockerfile
+    - Image size reduced. 359MB for now.
 
 ## Steps
 ```
@@ -25,12 +26,9 @@ docker run -d -p 8081:80 --rm --name nginx_mutillidae 0x566164696d/nginx_mutilli
 ## MySQL
 During the build of the container MySQL passwords will be randomly generated and printed on console:
 
-```
-[!!!] MySQL 'root' password is: FJVHs4vwVCTo94A
-[!!!] MySQL 'mutillidae' password is: pzborshCWPpKLy9
-```
-
 ## TODO
     - Fix ldap injection
+    - Add realtime access log panel
+    - default security level as ENV variable
 
 
